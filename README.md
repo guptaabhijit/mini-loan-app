@@ -1,6 +1,10 @@
 # mini-loan-app
 Mini Loan App consisting of APIs written in golang
+This application uses go-gotham framework: https://github.com/tolgaOzen/go-gotham which gives boilerplate for creating RESTful APIs adhering to SOLID principles.
 
+## Env
+create a new environment file `.env` from `.env.example`
+Update necessary Database configurations.
 
 ## Flags
 
