@@ -1,15 +1,21 @@
 package config
 
 import (
+	"fmt"
+	"github.com/joho/godotenv"
 	"log"
 	"os"
-
-	"github.com/joho/godotenv"
 )
 
 var Conf *Config
 
 func init() {
+	fmt.Println(os.Getenv("CI"))
+
+	if os.Getenv("CI") == "test" {
+		return
+	}
+
 	err := godotenv.Load("./.env")
 	if err != nil {
 		log.Fatal("Error loading .env file")

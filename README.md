@@ -23,6 +23,17 @@ go run gotham -migrate
 go run gotham -seed
 ```
 
+- to run test 
+```
+CI="test" go test
+```
+
+- mockery is used for generating mocks
+```
+mockery --name ILoanRepository
+```
+
+
 ## Database Schema
 
 3 Tables/Relations
